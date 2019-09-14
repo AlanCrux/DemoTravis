@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- 8
+before_install:
+- npm i -g firebase-tools
+cache:
+  directories:
+  - node_modules
+script:
+- yarn run build
+deploy:
+  provider: firebase
+  project: demotravis-40aaf
+  skip_cleanup: true
+  token:
+    secure: c8W70NXuknIIsuz90IhVUk2M+SrzkuMnqJBIJxcPsVglW2Rs/BdguNIG5IYLTtlVzHP7Hwn63xJ1Zrs38bOG4JTscJO9dSRPhTWdNPIfOrq+RCUGmDw90TKVUiJBejVN7vFsuSgn7I92lk9O5dI25wUvqKvEvwruDlbILxhqidTEecSj2xCiiNZoZt5nXaAKRdV0VorWlfwAmjQL4DCqzp1iNcfU1gergZdgaPeSHrxYbvHxucxj7dUnIHPP0PMWKSTBklduK2axqcEMrg8dNJDmLLA935Om3EgjRCENt7HjsLGZDpdJ5mbYQLbGa0hHJGbV20IfLE8qeVhjXBpdI0eumQ395KPo64IZfPtyiKznizdgjFkeOz4HUgaCwgh1CwMUr+Nwl3yl399LtA6h+aSkWosQAUNrdZlHFH5e/pTXzFzi6M4zTaS0dxO7gSLNJZ2ItzKglFSGPIERvLAuSpi72M0d6xdjmgBu0aoPnw1jhc47XLf+LE1DcrIQrjApn3miPD6RomR4hCdaRc+ZOC4HYuU4iSIxh4nXL/7ZDhb6G5LZlCq0pEslphqrNkEV32rXRX724WOm0h8l870e63z5170yh9C96uXL8OlCCd/GXUviN66/g3brog2t7shHd9+5M4936VeIwOz1EXXfyBNUm+rCuhETtkKih61PfpE=
